@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia clinica</title>
+</head>
+<body>
+<header>
+        <h1>Zoológico Mundo Salvaje</h1>
+        <nav>
+            <a href="/Index.html">Volver al Inicio</a> |
+            <a href="historia_clinica.html">Historia Clínica Animal</a>
+        </nav>
+        <hr>
+    
+    </header>
+     <form action="#" method="post">
+
+            <fieldset>
+                <legend><strong>Identificación del Animal</strong></legend>
+
+                <!-- Campo 1: Texto -->
+                <p>
+                    <label for="nombre_animal">1. Nombre del Animal:</label><br>
+                    <input type="text" id="nombre_animal" name="nombre_animal" placeholder="Ej. Simba" required>
+                </p>
+<!-- Campo 2: Texto -->
+                <p>
+                    <label for="codigo_microchip">2. Código de Microchip </label><br>
+                    <input type="text" id="codigo_microchip" name="codigo_microchip" placeholder="Ej. ZOO-2026-045" required>
+                </p>
+                 <!-- Campo 3-->
+                <p>
+                    <label for="fecha_ingreso">3. Fecha de Nacimiento o Ingreso al Zoológico:</label><br>
+                    <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+                </p>
+                 <!-- Campo 4 -->
+                <p>
+                    <label for="edad_estimada">4. Edad Estimada (años):</label><br>
+                    <input type="number" id="edad_estimada" name="edad_estimada" min="0" max="150" required>
+                </p>
+                 <!-- Campo 5-->
+                <p>
+                    5. Sexo del Animal:<br>
+                    <input type="radio" id="macho" name="sexo" value="macho" required>
+                    <label for="macho">Macho</label><br>
+                    <input type="radio" id="hembra" name="sexo" value="hembra">
+                    <label for="hembra">Hembra</label><br>
+                    <input type="radio" id="indeterminado" name="sexo" value="indeterminado">
+                    <label for="indeterminado">Indeterminado</label>
+                    <!-- Campo 6: Teléfono -->
+                <p>
+                    <label for="telefono_cuidador">6. Teléfono de Emergencia del Cuidador:</label><br>
+                    <input type="tel" id="telefono_cuidador" name="telefono_cuidador" placeholder="Ej: 0991234567" required>
+                </p>
+
+                <p>
+             <label for="correo_veterinario">7. Correo del Veterinario:</label><br>
+                    <input type="email" id="correo_veterinario" name="correo_veterinario" placeholder="veterinario@zoomundosalvaje.com">
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><strong>Evaluación Clínica</strong></legend>
+
+                <!-- Campo 8 -->
+                <p>
+                    <label for="clase_animal">8. Clasificación Taxonómica:</label><br>
+                    <select id="clase_animal" name="clase_animal" required>
+                        <option value="">-- Seleccione la clase --</option>
+                        <option value="mamifero">Mamífero</option>
+                        <option value="ave">Ave</option>
+                        <option value="reptil">Reptil</option>
+                        <option value="anfibio">Anfibio</option>
+                        <option value="pez">Pez</option>
+                    </select>
+                </p>
+
+                <!-- Campo 9 -->
+                <p>
+                    <label for="peso_kg">9. Peso Actual (kg):</label><br>
+                    <input type="number" id="peso_kg" name="peso_kg" step="0.1" min="0.1" max="6000">
+                </p>
+
+                <!-- Campo 10 -->
+                <p>
+                    10. Vacunas y Controles:<br>
+                    <input type="checkbox" id="rabia" name="controles" value="rabia">
+                    <label for="rabia">Antirrábica</label><br>
+                    <input type="checkbox" id="desparasitacion" name="controles" value="desparasitacion">
+                    <label for="desparasitacion">Desparasitación Interna/Externa</label><br>
+                    <input type="checkbox" id="moquillo" name="controles" value="moquillo">
+                    <label for="moquillo">Moquillo / Parvovirus</label><br>
+                    <input type="checkbox" id="cuarentena" name="controles" value="cuarentena">
+                    <label for="cuarentena">En periodo de cuarentena</label>
+                </p>
+ <!-- Campo 11-->
+                <p>
+                    <label for="dieta">11. Dieta Especial:</label><br>
+                    <textarea id="dieta" name="dieta" rows="3" cols="40" placeholder="Detalle tipo de alimento, cantidad y alergias..."></textarea>
+                </p>
+
+                <!-- Campo 12: -->
+                <p>
+                    <label for="diagnostico">12. Síntomas Observados:</label><br>
+                    <textarea id="diagnostico" name="diagnostico" rows="4" cols="40" required></textarea>
+                </p>
+            </fieldset>
+<fieldset>
+    <legend><strong>Datos Adicionales</strong></legend>
+
+    <!-- Campo 13-->
+    <p>
+        <label for="foto_animal">13. Subir Fotografía del Animal o Examen Médico:</label><br>
+        <input type="file" id="foto_animal" name="foto_animal">
+    </p>
+
+    <!-- Campo 14-->
+    <p>
+        <label for="hora_medicacion">14. Hora de Administración de Medicina o Alimento:</label><br>
+        <input type="time" id="hora_medicacion" name="hora_medicacion">
+    </p>
+            <p>
+                    <label for="recinto">15. Recinto o Hábitat Asignado:</label><br>
+                    <input list="lista_recintos" id="recinto" name="recinto" placeholder="Ej. Sabana Africana">
+                    <datalist id="lista_recintos">
+                        <option value="Sabana Africana">
+                        <option value="Aviario Tropical">
+                        <option value="Herpetario Central">
+                        <option value="Zona de Felinos">
+                        <option value="Acuario y Zona Acuática">
+                        <option value="Hospital Veterinario - Cuarentena">
+                    </datalist>
+                </p>
+            </fieldset>
+ <br>
+
+            <p>
+                <button type="submit">Guardar Ficha Veterinaria</button>
+                <button type="reset">Limpiar Formulario</button>
+            </p>
+
+    
+</body>
+</html>
